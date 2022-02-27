@@ -1,0 +1,62 @@
+#top-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: blue;
+    color: white;
+    width: 100vw;
+    align-items: center;
+    font-family: "Merriweather", serif;
+}
+#top-nav a {
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    padding: .25em;
+    font-size: 1em;
+    font-weight: bold;
+
+}
+#top-nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    width: 100%;
+    padding-inline-start: 0;
+    text-align: center;
+}
+#top-nav h3 {
+    margin-left: 5px;
+}
+#top-nav li {
+    margin-right: 5px;
+    margin-left: 5px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+#top-nav a:hover {
+    background-color: lightblue;
+}
+
+
+@media screen and (min-width: 800px){
+    #top-nav, #top-nav ul {
+        flex-direction: row;
+    }
+    #top-nav {
+        height: 10vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    #top-nav a {
+        font-size: 2.5vh;
+        padding: 3.75vh 1vh;
+    }
+    main {
+        margin-top: 10vh;
+    }
+}
