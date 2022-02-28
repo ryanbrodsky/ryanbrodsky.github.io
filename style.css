@@ -12,8 +12,8 @@
     color: white;
     text-decoration: none;
     width: 100%;
-    padding: .25em;
-    font-size: 1em;
+    margin: .25em;
+    font-size: 2em;
     font-weight: bold;
 
 }
@@ -23,12 +23,14 @@
     flex-direction: column;
     justify-content: flex-end;
     height: 100%;
-    width: 100%;
     padding-inline-start: 0;
     text-align: center;
 }
 #top-nav h3 {
     margin-left: 5px;
+    font-size: 2em;
+    text-align: center;
+
 }
 #top-nav li {
     margin-right: 5px;
@@ -42,10 +44,12 @@
 }
 
 
+
 @media screen and (min-width: 800px){
     #top-nav, #top-nav ul {
         flex-direction: row;
     }
+
     #top-nav {
         height: 10vh;
         position: absolute;
@@ -58,5 +62,11 @@
     }
     main {
         margin-top: 10vh;
+    }
+}
+/* mobile only styles, BAD FORM BUT OK */
+@media screen and (max-width:800px){
+    #top-nav ul {
+        width: 100%;
     }
 }
