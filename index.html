@@ -11,8 +11,16 @@
 </head>
 <body>
     <nav id="top-nav">
-        <h3>Ryan the Brodsky</h3>
-        <ul>
+        <div id="top-nav-heading-and-burger">
+            <h3>Ryan the Brodsky</h3>
+            <div class="burger-menu">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </div>
+
+        <ul id="top-nav-dropdown-parent-list">
             <li class="dropdown-parent-list-item">
                 <a href="#" class="dropdown-root">Learn from Ryan</a>
                 <section class="top-nav-dropdown-menu">
@@ -55,7 +63,21 @@
         </ul>
     </nav>
     <main>
-        <h1>This is the site of the once and future Brodsky.</h1>
+        <section id="home-bio-section">
+            <div>
+                <img id="home-bio-picture" src="img/frasier-enraged.png" alt="A picture of Ryan the Brodsky" >
+            </div>
+            <div id="home-bio-description">
+                <h2>Ryan the Brodsky</h2>
+                <p></p>
+                <ul>
+                    <li>Experienced instructor of hundreds of coding bootcamp students</li>
+                    <li>Recognized by General Assembly, a leading Software Engineering Immersive program, as a Distinguished Faculty member, one of the top 1% of instructors.</li>
+                    <li>Has designed extensive learning experiences across several fields of programming, including Front-End Web Development, Python for Data Analysis, and Cloud Engineering.</li>
+                    <li>Never skips leg day</li>
+                </ul>
+            </div>
+        </section>
     </main>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="app.js"></script>
