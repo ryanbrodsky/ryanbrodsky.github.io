@@ -46,7 +46,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
 }
 #top-nav-dropdown-parent-list {
     display: none;
@@ -131,6 +130,9 @@ lovingly stolen from https://www.w3schools.com/howto/howto_css_menu_icon.asp
     .burger-menu {
         display:none;
     }
+    #top-nav-heading-and-burger h3 {
+        flex-grow: 0;
+    }
     #top-nav {
         display: flex;
         flex-direction: row;
@@ -195,5 +197,8 @@ lovingly stolen from https://www.w3schools.com/howto/howto_css_menu_icon.asp
 @media screen and (max-width:799px){
     #top-nav ul {
         width: 100%;
+    }
+    #top-nav-heading-and-burger {
+        width: 100%
     }
 }
