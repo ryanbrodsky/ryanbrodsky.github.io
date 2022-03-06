@@ -1,8 +1,10 @@
 :root {
-    --main-bg-color: rgb(173, 182, 186);
-    --main-primary-color: blue;
-    --main-primary-dark: forestgreen;
-    --main-primary-light: lightblue;
+    --main-bg-color: #dbffe9;
+    --main-bg-color-dark: #dddbff;
+    --main-bg-color-light: rgb(230, 200, 164);
+    --main-primary-color: #20a45b ;
+    --main-primary-dark: #0c763b;
+    --main-primary-light: #5CDB95;
     --main-secondary-color: rgb(255, 140, 0);
     --main-secondary-dark: rgb(255, 111, 0);
     --main-secondary-light: orange;
@@ -24,6 +26,8 @@ h1, h2, h3, h4, h5, h6 {
     background-color: var(--main-primary-color);
     color: white;
     font-family: "Merriweather", serif;
+    border-bottom: 2px solid var(--main-primary-dark);
+    border-radius: 0px 0px 5px 5px;
 }
 #top-nav a {
     color: white;
@@ -75,13 +79,15 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     flex-direction: column;
     background-color: var(--main-primary-color);
+    border-radius: 0 0 5px 5px;
 }
 .top-nav-dropdown-menu {
     display: none;
 }
 
 .top-nav-dropdown-list li:hover {
-    font-size: 1.05em;
+    text-decoration: underline
+    /* border-bottom: 2px solid var(--main-primary-dark) */
 }
 /* simplest burger menu stuff 
 lovingly stolen from https://www.w3schools.com/howto/howto_css_menu_icon.asp
@@ -127,10 +133,12 @@ lovingly stolen from https://www.w3schools.com/howto/howto_css_menu_icon.asp
     display: grid;
     grid-template-columns: 1fr;
     gap: 5px;
+
 }
 #home-bio-picture-div {
     display: flex;
     align-items: center;
+    height: 100%;
 }
 #home-bio-picture {
     object-fit: cover;
@@ -139,10 +147,23 @@ lovingly stolen from https://www.w3schools.com/howto/howto_css_menu_icon.asp
     max-height: 100%;
     height: auto;
 }
+#home-bio-description, #home-learn-with-description {
+    border: 2px solid var(--main-primary-light);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px;
+    background-color: var(--main-bg-color-dark)
+}
 
 #home-bio-description h2 {
     text-align: center;
     margin-bottom: .25em;
+}
+#home-bio-description-list {
+    list-style-type: none;
+    padding-inline-start: 40px;
 }
 #home-bio-description li {
     margin: .5em 0;
@@ -151,6 +172,8 @@ h2.home-subheading {
     color: white;
     text-align: center;
     background-color: var(--main-primary-color);
+    border-bottom: 2px solid var(--main-primary-dark);
+    border-radius: 5px;
     padding: 3vh 0;
     margin: 2vh 0;
 }
@@ -159,10 +182,10 @@ h2.home-subheading {
     grid-template-columns: 1fr;
     gap: 1vh;
 }
-#home-learn-with-text-aside {
+#home-learn-with-description {
     text-align: center;
 }
-#home-learn-with-text-aside ul {
+#home-learn-with-description ul {
     list-style-type: none;
     padding-inline-start: 0;
 }
@@ -208,7 +231,7 @@ h2.home-subheading {
 
     #top-nav {
         height: 10vh;
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
     }
@@ -245,7 +268,7 @@ h2.home-subheading {
     #home-bio-section {
         display: grid;
         grid-template-columns: 2fr 3fr;
-        gap: 5px;
+        gap: 10px;
         margin-top: 12vh;
         padding: 0 1vw;
     }
@@ -257,6 +280,7 @@ h2.home-subheading {
         display: grid;
         grid-template-columns: 2fr 3fr;
         height: 50vh;
+        padding: 0 1vw;
     }
     #home-learn-with-video {
         display:flex;
