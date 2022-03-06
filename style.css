@@ -1,8 +1,27 @@
+:root {
+    --main-bg-color: rgb(173, 182, 186);
+    --main-primary-color: blue;
+    --main-primary-dark: forestgreen;
+    --main-primary-light: lightblue;
+    --main-secondary-color: rgb(255, 140, 0);
+    --main-secondary-dark: rgb(255, 111, 0);
+    --main-secondary-light: orange;
+
+
+}
+* {
+    margin-block-end: 0;
+    margin-block-start: 0;
+}
 body {
-    background-color: rgb(199, 204, 228)
+    background-color: var(--main-bg-color);
+    font-family: "Merriweather", serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Merriweather", serif;
 }
 #top-nav {
-    background-color: blue;
+    background-color: var(--main-primary-color);
     color: white;
     font-family: "Merriweather", serif;
 }
@@ -10,7 +29,7 @@ body {
     color: white;
     text-decoration: none;
     width: 100%;
-    margin: .25em;
+    margin: 0 .25em;
     font-size: 1em;
     font-weight: bold;
 }
@@ -28,7 +47,7 @@ body {
 }
 #top-nav h3 {
     margin-left: 5px;
-    font-size: 2em;
+    font-size: 7vw;
     text-align: center;
     flex-grow: 2;
 }
@@ -55,7 +74,7 @@ body {
 .top-nav-dropdown-menu {
     display: flex;
     flex-direction: column;
-    background-color: blue;
+    background-color: var(--main-primary-color);
 }
 .top-nav-dropdown-menu {
     display: none;
@@ -69,6 +88,9 @@ lovingly stolen from https://www.w3schools.com/howto/howto_css_menu_icon.asp
 */
 
 .burger-menu {
+    /* position: absolute;
+    top: 0;
+    right: 0; */
     display: inline-block;
     cursor: pointer;
     padding: 5vh 5vw;
@@ -106,6 +128,10 @@ lovingly stolen from https://www.w3schools.com/howto/howto_css_menu_icon.asp
     grid-template-columns: 1fr;
     gap: 5px;
 }
+#home-bio-picture-div {
+    display: flex;
+    align-items: center;
+}
 #home-bio-picture {
     object-fit: cover;
     width: 100%;
@@ -116,6 +142,39 @@ lovingly stolen from https://www.w3schools.com/howto/howto_css_menu_icon.asp
 
 #home-bio-description h2 {
     text-align: center;
+    margin-bottom: .25em;
+}
+#home-bio-description li {
+    margin: .5em 0;
+}
+h2.home-subheading {
+    color: white;
+    text-align: center;
+    background-color: var(--main-primary-color);
+    padding: 3vh 0;
+    margin: 2vh 0;
+}
+#home-learn-with-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1vh;
+}
+#home-learn-with-text-aside {
+    text-align: center;
+}
+#home-learn-with-text-aside ul {
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+#home-learn-with-video div {
+    text-align: center;
+}
+#home-learn-with-video {
+    text-align:center;
+}
+#home-learn-with-video iframe{
+    width:90vw;
+    height:50.85vw;
 }
 
 
@@ -128,12 +187,13 @@ lovingly stolen from https://www.w3schools.com/howto/howto_css_menu_icon.asp
     }
     #top-nav-heading-and-burger h3 {
         flex-grow: 0;
+        font-size: 1.75em;
     }
     #top-nav {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        background-color: blue;
+        background-color: var(--main-primary-color);
         color: white;
         width: 100vw;
         align-items: center;
@@ -143,6 +203,7 @@ lovingly stolen from https://www.w3schools.com/howto/howto_css_menu_icon.asp
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 0 5px;
+        margin-right: 15px;
     }
 
     #top-nav {
@@ -157,7 +218,7 @@ lovingly stolen from https://www.w3schools.com/howto/howto_css_menu_icon.asp
         margin: 0;
     }
     #top-nav>ul>li:hover {
-        background-color: lightblue;
+        background-color: var(--main-primary-light);
     }
     main {
         margin-top: 10vh;
@@ -183,10 +244,28 @@ lovingly stolen from https://www.w3schools.com/howto/howto_css_menu_icon.asp
     }
     #home-bio-section {
         display: grid;
-        grid-template-columns: 3fr 2fr;
+        grid-template-columns: 2fr 3fr;
         gap: 5px;
         margin-top: 12vh;
         padding: 0 1vw;
+    }
+    #home-learn-with-section h2 {
+        text-align: center;
+    }
+
+    #home-learn-with-section {
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        height: 50vh;
+    }
+    #home-learn-with-video {
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #home-learn-with-section iframe {
+        width: 450px;
+        height: 253px;
     }
 }
 /* mobile only styles, BAD FORM BUT OK */
