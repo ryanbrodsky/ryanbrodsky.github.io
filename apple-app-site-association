@@ -4,7 +4,7 @@
         "details": [
             {
                 "appID": "7J8K2K5MS3.com.ryanthebrodsky.authtemplate",
-                "paths": [ "*"]
+                "paths": [ "/google-auth-success"]
             }
         ]
     }
